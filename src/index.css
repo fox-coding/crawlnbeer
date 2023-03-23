@@ -1,0 +1,56 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Alkatra';
+    src: url(./assets/fonts/Alkatra-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Alkatra';
+    src: url(./assets/fonts/Alkatra-Medium.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Alkatra';
+    src: url(./assets/fonts/Alkatra-SemiBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Alkatra';
+    src: url(./assets/fonts/Alkatra-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+body {
+    font-family: 'Alkatra';
+    font-size: 18px;
+    @apply leading-7;
+    -webkit-font-smoothing: antialiased;
+    @apply bg-slate-400;
+  }
+  h1 {
+    @apply text-slate-700;
+  }
+  .btn {
+    @apply col-span-3 cursor-pointer bg-blue-300 rounded-lg text-black flex items-center justify-center px-6;
+  }
+  input[type="text"], select, textarea{
+    @apply block w-full border-neutral-200 focus:ring-0 focus:ring-offset-0 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1
+  }
+  .btn-primary{
+    @apply p-4 text-2xl font-bold bg-amber-500 rounded-lg hover:bg-amber-300 transition-colors duration-300 hover:text-amber-900 h-max
+  }
+  .btn-secondary{
+    @apply py-1 px-4 font-bold bg-slate-500 rounded-lg hover:bg-slate-300 transition-colors duration-300 hover:text-slate-900
+  }
+  .btn-remove{
+    @apply py-1 px-4 font-bold bg-red-500 rounded-lg hover:bg-red-300 transition-colors duration-300 hover:text-red-900
+  }
