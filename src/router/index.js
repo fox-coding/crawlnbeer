@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CreateGameView from '../views/CreateGameView.vue'
+import GameView from '../views/GameView.vue'
+
 
 const routes = [
   {
@@ -25,6 +27,24 @@ const routes = [
     path: '/create',
     name: 'create',
     component: CreateGameView,
+    meta: {
+      title: 'Crawl & Beer - Start a new journy with your own game!',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Create, build and share your own D&D game, together with your friends. Play online with your family and firends.'
+        },
+        {
+          property: 'og:description',
+          content: 'Create, build and share your own D&D game, together with your friends. Play online with your family and firends.'
+        }
+      ]
+    }
+  },
+  {
+    path: '/game/:id',
+    name: 'Game',
+    component: GameView,
     meta: {
       title: 'Crawl & Beer - Start a new journy with your own game!',
       metaTags: [
