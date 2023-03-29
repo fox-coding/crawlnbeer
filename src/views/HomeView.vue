@@ -8,7 +8,8 @@
             <h2 class="mt-44 mb-6 font-bold text-slate-900 italic text-4xl text-center lg:text-left">New classes now availible:</h2>
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 p-9">
                 <div v-for="card in classes" :key="card.uuid" class="bg-slate-600/40 shadow-md border-slate-600 border rounded-lg p-2 transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
-                    <div class="bg-blue-300 h-[200px] w-full rounded-t-lg"></div>
+                    <div class="h-[200px] w-full rounded-t-lg bg-cover" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+  card.id +'.jpg') + ')' }">
+                    </div>
                     <h3 class="text-slate-200 font-bold">{{ card.name }}</h3>
                     <div class="grid grid-cols-2 text-sm">
                         <span>HP</span><span class="text-right">{{ card.hp }}</span>
@@ -20,9 +21,12 @@
             <h2 class="mt-44 mb-6 font-bold text-slate-900 italic text-4xl text-center lg:text-left">Coming soon:</h2>
             <div class="md:flex">
               <div class="w-[200px] h-[200px]">
-                <div class="bg-blue-300 w-[400px] h-[400px] rounded-full"></div>
+                <div class="bg-blue-300 w-[400px] h-[400px] rounded-full">
+                  <div class="h-[460px] bg-cover" :style="{ backgroundImage: 'url(' + require('@/assets/img/thunderserk-preview.png') + ')' }"></div>
+
+                </div>
               </div>
-              <div class="p-12">
+              <div class="pl-44">
                 <h3 class="text-2xl">The Thunder Berserk</h3>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
               </div>

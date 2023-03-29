@@ -3,7 +3,7 @@
         <h1 class="mt-9 mb-12 text-6xl font-bold text-center">{{ game.id }}</h1>
         <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 p-9">
             <div v-for="card in game.players" :key="card.uuid" class="bg-slate-600/40 shadow-md border-slate-600 border rounded-lg p-2 transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
-                <div class="bg-blue-300 h-[200px] w-full rounded-t-lg"></div>
+                <div class="h-[200px] w-full rounded-t-lg bg-cover" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+  card.class +'.jpg') + ')' }"></div>
                 <h3 class="text-slate-200 font-bold">{{ card.name }}</h3>
                 <div class="grid grid-cols-2 text-sm">
                     <span>HP</span><span class="text-right">{{ card.hp }}</span>
