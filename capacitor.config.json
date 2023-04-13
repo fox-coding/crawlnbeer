@@ -1,0 +1,6 @@
+{
+  "appId": "com.crawlnbeer",
+  "appName": "crawlnbeer",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

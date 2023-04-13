@@ -5,9 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run serve"
   },
   "dependencies": {
+    "@capacitor/android": "4.7.3",
+    "@capacitor/app": "4.1.1",
+    "@capacitor/cli": "4.7.3",
+    "@capacitor/core": "4.7.3",
+    "@capacitor/haptics": "4.1.0",
+    "@capacitor/keyboard": "4.1.1",
+    "@capacitor/status-bar": "4.1.1",
     "core-js": "^3.8.3",
     "firebase": "^9.18.0",
     "vue": "^3.2.13",
